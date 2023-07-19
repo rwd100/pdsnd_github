@@ -201,6 +201,7 @@ def show_row_data(city):
     """
     print("Row data is availabe ...")
     df = pd.read_csv(CITY_DATA.get(city))
+    pd.set_option("display.max_columns",200)
     index = 0
     run = True
     while run:
