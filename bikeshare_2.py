@@ -186,8 +186,19 @@ def user_stats(df,city):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
     
-def show_row_data(city):
-    """Displays the row data of bikeshare users."""  
+def show_row_data(city): 
+    """
+    Displays the row data of bikeshare users..
+
+    Args:
+        (str) city - name of the city to analyze
+    Returns:
+        none
+    after the user answered with 'yes' 5 rows of the raw data will show in the terminal
+    and the question will pop again until reaching the end of the data or if the user answered with no after that 
+    the function will end.         
+    """
+    
     print("Row data is availabe ...")
     df = pd.read_csv(CITY_DATA.get(city))
     index = 0
