@@ -186,6 +186,7 @@ def user_stats(df,city):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
     
+
 def show_row_data(city): 
     """
     Displays the row data of bikeshare users..
@@ -198,7 +199,6 @@ def show_row_data(city):
     and the question will pop again until reaching the end of the data or if the user answered with no after that 
     the function will end.         
     """
-    
     print("Row data is availabe ...")
     df = pd.read_csv(CITY_DATA.get(city))
     index = 0
@@ -238,7 +238,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df,city)
-        show_row_data(city)
+        show_raw_data(city)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
