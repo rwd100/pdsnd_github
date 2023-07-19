@@ -186,7 +186,7 @@ def user_stats(df,city):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
     
-def show_row_data(city):
+def show_raw_data(city):
     """Displays the row data of bikeshare users."""  
     print("Row data is availabe ...")
     df = pd.read_csv(CITY_DATA.get(city))
@@ -227,7 +227,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df,city)
-        show_row_data(city)
+        show_raw_data(city)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
